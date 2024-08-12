@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function resetForm() {
+            document.getElementById('frmreservation').reset();
+        }
+        function showImage(object,url){
+            object.src=url;
+        }
+        function resetForm() {
+            document.getElementById('frmreservation').reset();
+        }
+        function showStyle(field){
+            field.style.backgroundColor='blue';
+        }
+        function hideStyle(field){
+            field.style.backgroundColor='white';
+        }
+        function setFontStyle(field){
+            field.style.fontWeight='bold';
+            field.style.fontFamily='Arial';
+        }
+    
+    </script>
+</head>
+<body>
+    <center>
+    <h1>Hotel Reservation</h1></center>
+    <form id="frmreservation">
+    <table>
+        <tr>
+            <td><label for="textname">Name</label></td>
+            <td><input type="text" id ="textname" required onfocus="showStyle(this);" onblur="hideStyle(this);" onselect="setFontStyle(this)"></td>
+        </tr>
+        <tr>
+            <td>Arrival Date:</td>
+            <td><input type="text" id="textarrival"  onfocus="showStyle(this);" onblur="hideStyle(this);" required onselect="setFontStyle(this)"></td>
+        </tr>
+        <tr>
+            <td>Departure Date:</td>
+            <td><input type="text" id="textdeparture" required onfocus="showStyle(this);"  onblur="hideStyle(this);" onselect="setFontStyle(this)"></td>
+        </tr>
+        <tr>
+            <td>Name of Persons :</td>
+            <td><input type="text" id="textperson" maxlength="3" size="3" required onfocus="showStyle(this);" onblur="hideStyle(this);" onselect="setFontStyle(this)"></td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="Submit" ></td>
+        </tr>
+        
+        <tr>
+            <td><img id="imgsubmit" width="300" height="300"  src="hotel.jpeg" alt="Submit", onmousedown="showImage(this, 'hotel1.jpeg');" onmouseup="showImage(this,'hotel.jpeg');", onclick="frmreservation.reset();"></td>
+
+            <td><img id="imgsubmit" width="300" height="300" src="hotel2.jpeg" alt="Submit", onmousedown="showImage(this, 'hotel3.jpeg');" onmouseup="showImage(this,'hotel2.jpeg');", onclick="frmreservation.reset();"></td>
+           
+        </tr>
+        
+    </table>
+</form>
+    
+</body>
+</html>
